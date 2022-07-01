@@ -39,27 +39,27 @@ export default function RegisterLogin() {
             <Formik validationSchema={validaciones} initialValues={initialValues} onSubmit={registrarUsuario}> 
                 {({ values, handleChange, handleSubmit, isSubmitting, errors }) => (
                     
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} >
                         <h1> Registro de usuario</h1> <br/>
                         
-                        <div style={{width: '300px', alignItems: "center", justifyContent: "right", display: "flex"}}>
-                            Usuario: 
+                        <div style={{width: '300px', alignItems: "center", justifyContent: "right", display: "flex"}} class="input-group mb-3">
+                             <span class="input-group-text " id="basic-addon1">Usuario: </span>
                             
-                            <input className='usuario' placeholder="Introduce el usuario..." type="text"
+                            <input className='usuario' placeholder="Introduce el usuario..." type="text" class="form-control"
                                 name="usuario" onChange={handleChange}/> 
                         </div><p/>
                         <div style={{width: '300px', alignItems: "center", justifyContent: "right", display: "flex"}}>
-                            Contraseña:
+                        <span class="input-group-text md-3" id="basic-addon1">Contraseña:</span>
 
                              
-                             <input className='password' placeholder="Introduce la password" type="text"
+                             <input className='password' placeholder="Introduce la password" type="text" class="form-control"
                                  name="password" onChange={handleChange}/>
                         </div>
                         <p/>
                             {errors.usuario ? (<div>{errors.usuario}</div>) : null}
                             {errors.password ? (<div>{errors.password}</div>) : null}
                             <p/>
-                        <button type="submit" className="Registrar" disabled={isSubmitting}>Registrar</button>
+                        <button type="submit" class="btn btn-primary" disabled={isSubmitting}>Registrar</button>
                         <p/>
                     </form>
                 )}

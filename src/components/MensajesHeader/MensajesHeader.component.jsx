@@ -30,30 +30,36 @@ export default function MensajesHeader(props) {
   return (
     <div className="MensajesHeader">
         {/* si todo este codigo lo meto en un form genera un bucle, pero nunca se queda nada pintado*/}
-        <Formik validationSchema={validaciones} initialValues={initialValues} onSubmit={leerDatos}>
+        <Formik validationSchema={validaciones} initialValues={initialValues} onSubmit={leerDatos} >
 
           {({ values, handleChange, handleSubmit, isSubmitting, errors }) => (
-            <form onSubmit={handleSubmit}>
-              <input className="Asunto" placeholder="Introduce tu nombre..." type="text"
-              name="asunto" onChange={handleChange}/>
-                
-              <input className="Email" placeholder="Introduce tu email..." type="text"
-              name="email" onChange={handleChange}/>
-                
-              <input className="Mensaje" placeholder="Introduce tu mensaje..." type="text"
-              name="mensaje" onChange={handleChange}/>
-                
-            {/* esta linea si la descomento me genera un bucle infinito sacando los datos de nuevoMensaje de la view*/}
-            {/*<button onClick={props.clickNuevo(mensajeNuevo)} className="Nuevo">Nuevo</button>*/}
-            
-              <button //onClick={props.clickNuevo} 
-                      type="submit" className="Nuevo" disabled={isSubmitting}>Nuevo</button>
-              <button onClick={props.clickEliminar} className="Vaciar">Vaciar</button>  
-              <br/>
+            <form onSubmit={handleSubmit} >
+              <div class="d-grid gap-2 d-md-flex">
+                <input className="Asunto" placeholder="Introduce tu nombre..." type="text" 
+                  name="asunto" onChange={handleChange}/>
+                  
+                <input className="Email" placeholder="Introduce tu email..." type="text" 
+                  name="email" onChange={handleChange}/>
+                  
+                <input className="Mensaje" placeholder="Introduce tu mensaje..." type="text" 
+                  name="mensaje" onChange={handleChange}/>
+                  
+                {/* esta linea si la descomento me genera un bucle infinito sacando los datos de nuevoMensaje de la view*/}
+                {/*<button onClick={props.clickNuevo(mensajeNuevo)} className="Nuevo">Nuevo</button>*/}
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                  <button //onClick={props.clickNuevo} 
+                          type="submit" className="Nuevo" disabled={isSubmitting} class="btn btn-success">Nuevo</button> 
+                  <button type="button" onClick={props.clickEliminar} className="Vaciar" class="btn btn-danger">Vaciar</button>  
+                </div>
+              </div>
+              <br/>              
+              
                 {errors.asunto ? (<div>{errors.asunto}</div>) : null}
                 {errors.email ? (<div>{errors.email}</div>) : null}
-                {errors.mensaje ? (<div>{errors.mensaje}</div>) : null}
+                {errors.mensaje ? (<div>{errors.mensaje}</div>) : null}    
+              
             </form>
+            
           )}
         </Formik>
     </div> 
