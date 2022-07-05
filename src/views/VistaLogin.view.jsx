@@ -8,6 +8,16 @@ import { useNavigate } from 'react-router-dom';
 import RegisterLogin from '../components/RegisterLogin/RegisterLogin.component';
 
 export default function VistaLogin() {
+    let miVariable = process.env.REACT_APP_ENV_VARIABLE;
+
+    useEffect(() => {
+	
+        console.log("Variable Desarrollo", process.env.REACT_APP_ENV_VARIABLE);
+        
+        console.log("Variable Producción: ", process.env.REACT_APP_PRODUCTION);
+        
+      })
+
     const [acceso, setAcceso] = useState(true);
     const navigate = useNavigate();    
 
@@ -37,6 +47,7 @@ export default function VistaLogin() {
 
     return (
         <div>
+            <strong>{miVariable}</strong>
             <div style={{color: 'red',backgroundColor: "black", paddingTop: '12px', paddingBottom: '12px', position: 'relative', left: 'auto'}}> 
 
                 { acceso ? 

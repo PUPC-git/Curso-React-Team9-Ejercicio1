@@ -13,6 +13,7 @@ export default function WebLogin() {
         
     useEffect(() => {
         esDeDia = localStorage.getItem('cambioStyle');
+        console.log("entro" + esDeDia)
 
     }, []);
     

@@ -1,5 +1,5 @@
 import { getDefaultNormalizer } from '@testing-library/react';
-import React, { useEffect, useState, useDispatch, useSelector } from 'react';
+import React, { useEffect, useState, useDispatch, useSelector, useMemo } from 'react';
 import { setProducts } from '../../redux/actions/actions';
 import { GET, GET_AXIOS } from '../../services/http.services';
 import './Store.component.scss';
