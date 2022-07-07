@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux/es/exports';
+//import { useDispatch } from 'react-redux/es/exports';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from '@fortawesome/free-regular-svg-icons';
-import { cambioStyle } from '../../redux/actions/actions';
+//import { cambioStyle } from '../../redux/actions/actions';
 import './Bootstrap.component.scss';
 
 export default function Bootstrap() {
     const [esDeDia, setDeDia] = useState(true);
-    const dispatch = useDispatch();
+    //const dispatch = useDispatch();
   
     let texto = esDeDia ?
       (<div><FontAwesomeIcon icon={faMoon}/></div>) :

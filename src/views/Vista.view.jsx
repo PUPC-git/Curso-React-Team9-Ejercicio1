@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { login } from '../redux/actions/actions';
-import { useDispatch } from 'react-redux/es/exports';
+//import { useDispatch } from 'react-redux/es/exports';
 import WebLogin from './loggin/WebLogin.view';
 //import Mensajes from './Mensajes/Mensajes.view';
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 import VistaLogin from './VistaLogin.view';
 
 export default function Vista() {
     const [acceso, setAcceso] = useState(true);
-    const navigate = useNavigate();    
+    //const navigate = useNavigate();    
 
-    const dispatch = useDispatch();
+   // const dispatch = useDispatch();
 
     
     let logged = localStorage.getItem('logged');

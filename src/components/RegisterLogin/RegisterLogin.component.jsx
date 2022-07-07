@@ -18,8 +18,8 @@ export default function RegisterLogin() {
 
     localStorage.setItem('logged', false);
     let registrarUsuario = (event, {setSubmitting}) => {
-        console.log(event.usuario);
-        console.log(event.password);
+        //console.log(event.usuario);
+        //console.log(event.password);
         
         localStorage.setItem('credential', event);
         localStorage.setItem('logged', true);
