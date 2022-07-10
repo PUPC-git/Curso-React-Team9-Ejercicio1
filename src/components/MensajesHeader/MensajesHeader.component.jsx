@@ -34,7 +34,7 @@ export default function MensajesHeader(props) {
 
           {({ values, handleChange, handleSubmit, isSubmitting, errors }) => (
             <form onSubmit={handleSubmit} >
-              <div class="d-grid gap-2 d-md-flex">
+              <div className="d-grid gap-2 d-md-flex">
                 <input className="Asunto" placeholder="Introduce tu nombre..." type="text" 
                   name="asunto" onChange={handleChange}/>
                   
@@ -46,10 +46,10 @@ export default function MensajesHeader(props) {
                   
                 {/* esta linea si la descomento me genera un bucle infinito sacando los datos de nuevoMensaje de la view*/}
                 {/*<button onClick={props.clickNuevo(mensajeNuevo)} className="Nuevo">Nuevo</button>*/}
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <div className="d-grid gap-2 d-md-flex justify-content-md-end">
                   <button //onClick={props.clickNuevo} 
-                          type="submit" className="Nuevo" disabled={isSubmitting} class="btn btn-success">Nuevo</button> 
-                  <button type="button" onClick={props.clickEliminar} className="Vaciar" class="btn btn-danger">Vaciar</button>  
+                          type="submit" className="Nuevo" disabled={isSubmitting} className="btn btn-success">Nuevo</button> 
+                  <button type="button" onClick={props.clickEliminar} className="Vaciar" className="btn btn-danger">Vaciar</button>  
                 </div>
               </div>
               <br/>              

@@ -42,24 +42,24 @@ export default function RegisterLogin() {
                     <form onSubmit={handleSubmit} >
                         <h1> Registro de usuario</h1> <br/>
                         
-                        <div style={{width: '300px', alignItems: "center", justifyContent: "right", display: "flex"}} class="input-group mb-3">
-                             <span class="input-group-text " id="basic-addon1">Usuario: </span>
+                        <div style={{width: '300px', alignItems: "center", justifyContent: "right", display: "flex"}} className="input-group mb-3">
+                             <span className="input-group-text " id="basic-addon1">Usuario: </span>
                             
-                            <input className='usuario' placeholder="Introduce el usuario..." type="text" class="form-control"
+                            <input className='usuario' placeholder="Introduce el usuario..." type="text" className="form-control"
                                 name="usuario" onChange={handleChange}/> 
                         </div><p/>
                         <div style={{width: '300px', alignItems: "center", justifyContent: "right", display: "flex"}}>
-                        <span class="input-group-text md-3" id="basic-addon1">Contraseña:</span>
+                        <span className="input-group-text md-3" id="basic-addon1">Contraseña:</span>
 
                              
-                             <input className='password' placeholder="Introduce la password" type="text" class="form-control"
+                             <input className='password' placeholder="Introduce la password" type="text" className="form-control"
                                  name="password" onChange={handleChange}/>
                         </div>
                         <p/>
                             {errors.usuario ? (<div>{errors.usuario}</div>) : null}
                             {errors.password ? (<div>{errors.password}</div>) : null}
                             <p/>
-                        <button type="submit" class="btn btn-primary" disabled={isSubmitting}>Registrar</button>
+                        <button type="submit" className="btn btn-primary" disabled={isSubmitting}>Registrar</button>
                         <p/>
                     </form>
                 )}

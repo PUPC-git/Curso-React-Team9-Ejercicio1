@@ -43,19 +43,19 @@ export default function Store() {
                  <br/>
                  { products.map((product, index) => 
                     (<div key={index} className="container">
-                        <h6 className="container p-4"  class="badge bg-secondary " > {product.title}</h6>
+                        <h6 className="container p-4"  className="badge bg-secondary " > {product.title}</h6>
                         <p>
-                            <table style={{width: '100%'}} class="table">
+                            <table style={{width: '100%'}} className="table">
                                 <tr >
-                                    <th style={{width: '10%'}} class="table-success">
+                                    <th style={{width: '10%'}} className="table-success">
                                         Precio: 
                                     </th>
-                                    <td style={{width: '40%'}} class="text-primary" >
+                                    <td style={{width: '40%'}} className="text-primary" >
                                         {product.price} 
                                     </td>
                                     <td rowSpan='4' style={{width: '100px'}}>
-                                        <div class="card" >
-                                           <img src={product.image} style={{width: '100px'}} alt="" class="card-img-top"/>                            
+                                        <div className="card" >
+                                           <img src={product.image} style={{width: '100px'}} alt="" className="card-img-top"/>                            
                                            
                                         </div>
                                     </td>
@@ -64,7 +64,7 @@ export default function Store() {
                                     <th style={{width: '10%'}}>
                                         Categoria: 
                                     </th>
-                                    <td style={{width: '40%'}} class="text-primary">
+                                    <td style={{width: '40%'}} className="text-primary">
                                         {product.category} 
                                     </td>
                                 </tr>
@@ -72,7 +72,7 @@ export default function Store() {
                                    <th style={{width: '10%'}}>
                                         Valoracion: 
                                     </th> 
-                                    <td style={{width: '40%'}} class="text-primary">
+                                    <td style={{width: '40%'}} className="text-primary">
                                         {product.rating.rate} 
                                     </td>
                                 </tr>
@@ -80,12 +80,12 @@ export default function Store() {
                                     <th style={{width: '10%'}}>
                                         Ventas: 
                                     </th>
-                                    <td style={{width: '40%'}} class="text-primary">
+                                    <td style={{width: '40%'}} className="text-primary">
                                         {product.rating.count} 
                                     </td>
                                 </tr>
                                 <tr >
-                                    <td colSpan='3' class="text-primary">
+                                    <td colSpan='3' className="text-primary">
                                         {product.description}
                                     </td>
                                 </tr>

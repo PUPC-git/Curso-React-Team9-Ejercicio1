@@ -3,7 +3,7 @@ export default function LoginButton(props) {
 	
     return (
 	
-        <button onClick={props.onClick} class="btn btn-primary">Conectarse</button>
+        <button onClick={props.onClick} className="btn btn-primary">Conectarse</button>
 	
     );
 	

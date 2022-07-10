@@ -2,7 +2,7 @@ export default function LogoutButton(props) {
 	
     return (
 	
-        <button onClick={props.onClick} class="btn btn-primary">Desconectarse</button>
+        <button onClick={props.onClick} className="btn btn-primary">Desconectarse</button>
 	
     );
 	
